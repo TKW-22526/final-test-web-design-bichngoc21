@@ -1,0 +1,14 @@
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+.card-body .btn{
+    margin-top: auto;
+}
+.card-title{
+    min-height: 60px;
+}
+.card-img-top{
+    height: 350px;
+    object-fit: cover;
+}
