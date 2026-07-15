@@ -12,3 +12,15 @@
     height: 350px;
     object-fit: cover;
 }
+.carousel-caption h1{
+    font-size:50px;
+    font-weight:bold;
+    color:white;
+    -webkit-text-stroke:1px black;
+    text-shadow:3px 3px 6px rgba(0,0,0,.6);
+}
+.carousel-caption p{
+    font-size:22px;
+    color:white;
+    text-shadow:2px 2px 4px rgba(0,0,0,.8);
+}
