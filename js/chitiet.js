@@ -8,26 +8,23 @@ const container = document.getElementById("productDetailContainer");
 if(product){
 
 container.innerHTML = `
-<div class="col-md-6 text-center">
+<div class="col-lg-5 col-md-6 text-center">
     <img src="${product.image}"
-         class="img-fluid rounded shadow"
+         class="product-detail-img shadow"
          alt="${product.name}">
 </div>
 
-<div class="col-md-6">
+<div class="col-lg-5">
     <h2>${product.name}</h2>
+    <span class="badge bg-success fs-6 mb-3"> ${product.category} </span>
+    <h2 class="text-danger fw-bold mb-4">${product.price}</h2>  
+    <hr class="my-4">
+     <p>${product.desc}</p>
+    <p class="text-success fw-bold">&#10004; Còn hàng</p>
+    
+    <button class="btn btn-success" onclick="addToCart('${product.name}')">🛒 Thêm vào giỏ hàng </button>
 
-    <h4 class="text-danger my-3">
-        ${product.price}
-    </h4>
-
-    <p><strong>Danh mục:</strong> ${product.category}</p>
-
-    <p>${product.desc}</p>
-
-<button class="btn btn-success" onclick="addToCart('${product.name}')"> Thêm vào giỏ </button>
-
-<a href="san-pham.html" class="btn btn-outline-secondary ms-2"> Quay lại </a>
+    <a href="san-pham.html" class="btn btn-outline-secondary ms-2"> Quay lại </a>
 
 </div>
 `;
@@ -39,6 +36,5 @@ container.innerHTML=`
     <h3>Không tìm thấy sản phẩm.</h3>
 </div>
 `;
-
 }
 
