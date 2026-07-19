@@ -38,48 +38,112 @@ const products = [
         category: "Kỷ niệm",
         image: "../assets/hoakyniem/kyniem5.jpg",
         detail: "chitiet.html?id=5"
-    }
-   /*{
-        id: 2,
-        name: "Bó Tulip Hồng",
-        price: "420.000đ",
-        category: "Sinh nhật",
-        image: "assets/hoa2.jpg",
-        detail: "chitiet.html?id=2"
-    },
-    {
-        id: 3,
-        name: "Giỏ Hoa Để Bàn",
-        price: "320.000đ",
-        category: "Giỏ hoa",
-        image: "assets/hoa3.jpg",
-        detail: "chitiet.html?id=3"
-    },
-    {
-        id: 4,
-        name: "Bó Hoa Tốt Nghiệp",
-        price: "400.000đ",
-        category: "Tốt nghiệp",
-        image: "assets/hoa4.jpg",
-        detail: "chitiet.html?id=4"
-    },
-    {
-        id: 5,
-        name: "Bó Hoa Hướng Dương",
-        price: "380.000đ",
-        category: "Tốt nghiệp",
-        image: "assets/hoa5.jpg",
-        detail: "chitiet.html?id=5"
     },
     {
         id: 6,
-        name: "Giỏ Hoa Khai Trương",
-        price: "650.000đ",
-        category: "Giỏ hoa",
-        image: "assets/hoa6.jpg",
+        name: "Bó Tulip hồng",
+        price: "420.000đ",
+        category: "Sinh nhật",
+        image: "../assets/hoa2.jpg",
         detail: "chitiet.html?id=6"
-    }*/
-];
+    },
+    {
+        id: 7,
+        name: "Bó Tulip hồng giấy trắng",
+        price: "600.000đ",
+        category: "Sinh nhật",
+        image: "../assets/hoasinhnhat/sinhnhat1.jpg",
+        detail: "chitiet.html?id=7"
+    },
+    {
+        id: 8,
+        name: "Bó cẩm tú cầu phối hoa",
+        price: "400.000đ",
+        category: "Sinh nhật",
+        image: "../assets/hoasinhnhat/sinhnhat2.jpg",
+        detail: "chitiet.html?id=8"
+    },
+    {
+        id: 9,
+        name: "Bó cẩm tú cầu mix",
+        price: "850.000đ",
+        category: "Sinh nhật",
+        image: "../assets/hoasinhnhat/sinhnhat3.jpg",
+        detail: "chitiet.html?id=9"
+    },
+    {
+        id: 10,
+        name: "Bó hoa hồng kem dâu",
+        price: "650.000đ",
+        category: "Sinh nhật",
+        image: "../assets/hoasinhnhat/sinhnhat4.jpg",
+        detail: "chitiet.html?id=10"
+    },
+    {
+        id: 11,
+        name: "Bó Hoa Tốt Nghiệp",
+        price: "400.000đ",
+        category: "Tốt nghiệp",
+        image: "../assets/hoa4.jpg",
+        detail: "chitiet.html?id=11"
+    },
+    {
+        id: 12,
+        name: "Bó hoa gấu tốt nghiệp",
+        price: "450.000đ",
+        category: "Tốt nghiệp",
+        image: "../assets/hoatotnghiep/totnghiep1.jpg",
+        detail: "chitiet.html?id=12"
+    },
+    {
+        id: 13,
+        name: "Bó hoa hướng dương giấy Kraf",
+        price: "320.000đ",
+        category: "Tốt nghiệp",
+        image: "../assets/hoatotnghiep/totnghiep2.jpg",
+        detail: "chitiet.html?id=13"
+    },
+    {
+        id: 14,
+        name: "Bó hoa hướng dương trắng",
+        price: "350.000đ",
+        category: "Tốt nghiệp",
+        image: "../assets/hoatotnghiep/totnghiep3.jpg",
+        detail: "chitiet.html?id=14"
+    },
+    {
+        id: 15,
+        name: "Giỏ Hoa Để Bàn 01",
+        price: "320.000đ",
+        category: "Giỏ hoa",
+        image: "../assets/hoa3.jpg",
+        detail: "chitiet.html?id=15"
+    },
+    {
+        id: 16,
+        name: "Giỏ Hoa Để Bàn 02",
+        price: "320.000đ",
+        category: "Giỏ hoa",
+        image: "../assets/giohoa/giohoa1.jpg",
+        detail: "chitiet.html?id=16"
+    },
+    {
+        id: 17,
+        name: "Giỏ Hoa Để Bàn 03",
+        price: "320.000đ",
+        category: "Giỏ hoa",
+        image: "../assets/giohoa/giohoa2.jpg",
+        detail: "chitiet.html?id=15"
+    },
+    {
+        id: 18,
+        name: "Giỏ Hoa Để Bàn 01",
+        price: "320.000đ",
+        category: "Giỏ hoa",
+        image: "../assets/giohoa/giohoa3.jpg",
+        detail: "chitiet.html?id=85"
+    },
+]; 
 
 function displayProducts(list){
     let html = "";
@@ -88,7 +152,7 @@ html += `
 <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
     <div class="card product-card h-100">
         <img src="${product.image}" class="card-img-top" alt="${product.name}">
-        <div class="card-body">
+        <div class="card-body" text-center>
             <h5 class="card-title">${product.name}</h5>
             <p> Giá: <span class="text-danger">${product.price}</span> </p>
             <a href="${product.detail}" class="btn btn-success w-100">Xem chi tiết</a>
@@ -99,7 +163,7 @@ html += `
     });
     document.getElementById("productList").innerHTML = html;
 }
-//displayProducts(products);
+displayProducts(products);
 // Lấy tham số category từ URL
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
@@ -134,4 +198,3 @@ function searchProduct(){
     });
     displayProducts(result);
 }
-displayProducts(products);

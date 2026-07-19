@@ -116,14 +116,23 @@
     font-weight:600;
 }
 .product-card p{
-    margin-bottom:15px;
+    margin-bottom:30px;
 }
 .product-card .text-danger{
-    font-weight:bold;
     font-size:18px;
 }
 .product-card .btn{
     margin-top:auto;
     width:100%;
     border-radius:5px;
+}
+.card-body p{
+    margin-bottom:10px;
+    margin-top:auto;
+    font-size:16px;
+    color:#666;
+}
+.card-title{
+    font-weight:900;
+    min-height:50px;
 }
