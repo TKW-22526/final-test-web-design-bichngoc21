@@ -9,13 +9,11 @@ if(product){
 
 container.innerHTML = `
 <div class="col-lg-5 col-md-6 text-center">
-    <img src="${product.image}"
-         class="product-detail-img shadow"
-         alt="${product.name}">
+    <img src="${product.image}" class="product-detail-img shadow " alt="${product.name}">
 </div>
 
 <div class="col-lg-5">
-    <h2>${product.name}</h2>
+    <h2 class="product-detail-name" >${product.name}</h2>
     <span class="badge bg-success fs-6 mb-3"> ${product.category} </span>
     <h2 class="text-danger fw-bold mb-4">${product.price}</h2>  
     <hr class="my-4">

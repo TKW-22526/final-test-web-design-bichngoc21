@@ -1,3 +1,4 @@
+
 .banner-img{
     width: 100%;
     height: 400px;
@@ -14,6 +15,27 @@
     font-style: italic;
     color: #777;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Lora:ital,wght@0,700;1,700&display=swap');
+
+/* Thay đổi font cho các tiêu đề */
+section h2, 
+.category-card h5, 
+.card-body h5, 
+section.bg-light h5 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+}
+.bg-success.text-white.text-center.py-5 h1 {
+    font-family: 'Lora', serif !important;
+    font-weight: 700;
+}
+.product-detail-name {
+    font-family: 'Lora', serif !important;
+    font-weight: 700;
+}
+
+
 /*hoa nổi bật*/
 .card-body{
     display: flex;
@@ -135,6 +157,12 @@
 .card-title{
     font-weight:900;
     min-height:50px;
+}
+.product-card .card-body h5 {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*chi tiết*/
 .product-detail-img {
