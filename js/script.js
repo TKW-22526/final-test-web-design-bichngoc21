@@ -165,6 +165,18 @@ const products = [
 
 function displayProducts(list){
     let html = "";
+
+    if(list.length===0){
+
+    document.getElementById("productList").innerHTML=`
+
+        <div class="col-12 text-center py-5">
+            <h4 class="text-danger">Không tìm thấy sản phẩm </h4>
+            <p class="text-muted">Không có sản phẩm phù hợp với từ khóa bạn tìm kiếm. </p>
+        </div>
+    `;
+    return;
+}
     list.forEach(product=>{
 html += `
 <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
@@ -175,12 +187,12 @@ html += `
             <h5>${product.name}</h5>
             <p> Giá: <span class="text-danger">${product.price}</span></p>
             <div class="d-grid gap-2">
-                 <a href="${product.detail}" class="btn btn-success"> Xem chi tiết </a>
+            <a href="${product.detail}" class="btn btn-success"> Xem chi tiết </a>
                 <button class="btn btn-outline-success" onclick="addToCart('${product.name}')"> Thêm vào giỏ </button>
-             </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 `;
     });
     document.getElementById("productList").innerHTML = html;
